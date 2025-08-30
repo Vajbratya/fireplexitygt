@@ -19,6 +19,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { toast } from "sonner"
 import { ErrorDisplay } from '@/components/error-display'
+import Footer from '@/components/footer'
 
 interface MessageData {
   sources: SearchResult[]
@@ -268,16 +269,16 @@ export default function FireplexityPage() {
       {/* Hero section - matching other pages */}
       <div className={`px-4 sm:px-6 lg:px-8 pt-16 pb-8 ${isChatActive ? 'hidden' : 'block'}`}>
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-[3rem] lg:text-[4rem] font-medium tracking-tight leading-tight">
-            <span className="text-[#ff4d00] block">
+          <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight leading-tight">
+            <span className="text-orange-500 block">
               Fireplexity v2
             </span>
-            <span className="text-[#262626] dark:text-white block text-[3rem] lg:text-[4rem] font-medium -mt-2">
+            <span className="text-gray-900 dark:text-white block">
               Search & Scrape
             </span>
           </h1>
-          <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-400">
-            Multi-source search with AI-powered insights, news, and images
+          <p className="mt-6 text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+            Your intelligent research assistant for comprehensive, multi-source search with AI-powered insights, news, and images.
           </p>
         </div>
       </div>
@@ -314,16 +315,16 @@ export default function FireplexityPage() {
       
       {/* API Key Modal */}
       <Dialog open={showApiKeyModal} onOpenChange={setShowApiKeyModal}>
-        <DialogContent>
+        <DialogContent className="rounded-2xl">
           <DialogHeader>
-            <DialogTitle>Firecrawl API Key Required</DialogTitle>
-            <DialogDescription>
-              To use Fireplexity search, you need a Firecrawl API key. Get one for free at{' '}
+            <DialogTitle className="text-2xl font-bold">Firecrawl API Key Required</DialogTitle>
+            <DialogDescription className="text-base">
+              To use Fireplexity, you need a Firecrawl API key. Get one for free at{' '}
               <a 
                 href="https://www.firecrawl.dev" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-orange-600 hover:text-orange-700 underline"
+                className="text-orange-500 hover:text-orange-600 font-semibold underline"
               >
                 firecrawl.dev
               </a>
@@ -340,14 +341,15 @@ export default function FireplexityPage() {
                   handleApiKeySubmit()
                 }
               }}
-              className="h-12"
+              className="h-14 text-lg rounded-full border-2"
             />
-            <Button onClick={handleApiKeySubmit} variant="orange" className="w-full">
+            <Button onClick={handleApiKeySubmit} variant="orange" size="lg" className="w-full">
               Save API Key
             </Button>
           </div>
         </DialogContent>
       </Dialog>
+      <Footer />
     </div>
   )
 }
