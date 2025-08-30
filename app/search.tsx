@@ -1,6 +1,6 @@
 'use client'
 
-import { Search } from 'lucide-react'
+import { Search, Loader2 } from 'lucide-react'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import Loading from '@/components/loading'
@@ -31,7 +31,7 @@ export function SearchComponent({ handleSubmit, input, handleInputChange, isLoad
           className="absolute right-1.5 sm:right-2 p-0 flex items-center justify-center rounded-full bg-orange-500 hover:bg-orange-600 disabled:bg-gray-300 dark:disabled:bg-gray-700 disabled:cursor-not-allowed active:scale-95 transition-all duration-300 w-11 h-11 sm:w-12 sm:h-12 group"
         >
           {isLoading ? (
-            <Loading text="" />
+            <Loader2 className="h-6 w-6 animate-spin text-white" />
           ) : (
             <svg
               fill="none"
@@ -53,9 +53,7 @@ export function SearchComponent({ handleSubmit, input, handleInputChange, isLoad
         </button>
       </div>
       {isLoading && (
-        <div className="mt-6 text-center">
-          <Loading text="Searching the web..." />
-        </div>
+        <Loading text="Searching the web..." fullscreen />
       )}
     </form>
   )

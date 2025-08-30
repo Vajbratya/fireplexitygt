@@ -257,9 +257,9 @@ export default function FireplexityPage() {
             <Image 
               src="https://tfbod41w6i.ufs.sh/f/ZJzgmIXu5Ge1sn6kSplc5oASTGquXHFMks4aO9rZ2YWwdjlP"
               alt="baseevidence por laudos.ai"
-              width={180}
-              height={48}
-              className="h-12 w-auto"
+              width={360}
+              height={96}
+              className="h-24 w-auto"
             />
           </Link>
         </div>
