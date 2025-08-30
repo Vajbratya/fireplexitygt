@@ -90,22 +90,6 @@ export function ChatInterface({ messages, sources, newsResults, imageResults, fo
     }, 100)
   }, [messages, sources, followUpQuestions])
 
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    if (!input.trim() || isLoading) return
-    handleSubmit(e)
-    
-    // Scroll to bottom after submitting
-    setTimeout(() => {
-      if (scrollContainerRef.current) {
-        scrollContainerRef.current.scrollTo({
-          top: scrollContainerRef.current.scrollHeight,
-          behavior: 'smooth'
-        })
-      }
-    }, 100)
-  }
-
   const handleFollowUpClick = (question: string) => {
     // Set the input and immediately submit
     handleInputChange({ target: { value: question } } as React.ChangeEvent<HTMLTextAreaElement>)
@@ -615,7 +599,7 @@ export function ChatInterface({ messages, sources, newsResults, imageResults, fo
       {/* Fixed input at bottom */}
       <div className="fixed lg:absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white via-white dark:from-zinc-900 dark:via-zinc-900 to-transparent pt-4 pb-4 sm:pt-6 sm:pb-6 z-30">
         <div className="max-w-2xl mx-auto px-3 sm:px-4 lg:px-8">
-          <form onSubmit={handleFormSubmit} ref={formRef}>
+          <form onSubmit={handleSubmit} ref={formRef}>
             <div className="bg-white dark:bg-zinc-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 p-3 focus-within:border-gray-900 dark:focus-within:border-gray-100 transition-colors">
               <div className="flex items-end gap-2">
                 <Textarea
