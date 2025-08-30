@@ -250,14 +250,13 @@ export default function FireplexityPage() {
       <header className="px-4 sm:px-6 lg:px-8 py-1 mt-2">
         <div className="max-w-[1216px] mx-auto flex items-center justify-between">
           <Link
-            href="https://firecrawl.dev"
-            target="_blank"
+            href="/"
             rel="noopener noreferrer"
             className="flex items-center"
           >
             <Image 
-              src="/firecrawl-wordmark.svg" 
-              alt="Firecrawl Logo" 
+              src="https://tfbod41w6i.ufs.sh/f/ZJzgmIXu5Ge1sn6kSplc5oASTGquXHFMks4aO9rZ2YWwdjlP"
+              alt="baseevidence por laudos.ai"
               width={90} 
               height={24}
               className="h-6 w-auto"
@@ -271,14 +270,14 @@ export default function FireplexityPage() {
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight leading-tight">
             <span className="text-orange-500 block">
-              Fireplexity v2
+              baseevidence
             </span>
             <span className="text-gray-900 dark:text-white block">
-              Search & Scrape
+              por laudos.ai
             </span>
           </h1>
           <p className="mt-6 text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
-            Your intelligent research assistant for comprehensive, multi-source search with AI-powered insights, news, and images.
+            Busca inteligente com IA, notícias, imagens e informações em tempo real.
           </p>
         </div>
       </div>

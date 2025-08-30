@@ -219,7 +219,7 @@ export function ChatInterface({ messages, sources, newsResults, imageResults, fo
                                 </div>
                               )}
                             </div>
-                            <div className="grid grid-cols-5 gap-2">
+                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
                               {messageSources.slice(0, 5).map((result, idx) => (
                                 <a
                                   key={idx}
@@ -423,7 +423,7 @@ export function ChatInterface({ messages, sources, newsResults, imageResults, fo
                   </div>
                 )}
               </div>
-              <div className="grid grid-cols-5 gap-2">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
                 {sources.slice(0, 5).map((result, index) => (
                   <a
                     key={index}

@@ -16,19 +16,19 @@ export function SearchComponent({ handleSubmit, input, handleInputChange, isLoad
   return (
     <form onSubmit={handleSubmit} className="max-w-4xl mx-auto pt-12">
       <div className="relative flex items-center group">
-        <Search className="absolute left-4 w-6 h-6 text-gray-400 dark:text-gray-500 transition-colors group-focus-within:text-orange-500" />
+        <Search className="absolute left-4 w-5 h-5 sm:w-6 sm:h-6 text-gray-400 dark:text-gray-500 transition-colors group-focus-within:text-orange-500" />
         <Input
           type="text"
           value={input}
           onChange={handleInputChange}
           placeholder="Ask anything..."
-          className="pl-14 pr-24 h-16 text-lg rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-zinc-900 focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
+          className="pl-12 pr-20 sm:pl-14 sm:pr-24 h-14 sm:h-16 text-base sm:text-lg rounded-full border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-zinc-900 focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
           disabled={isLoading}
         />
         <button
           type="submit"
           disabled={isLoading || !input || input.trim() === ''}
-          className="absolute right-2 p-0 flex items-center justify-center rounded-full bg-orange-500 hover:bg-orange-600 disabled:bg-gray-300 dark:disabled:bg-gray-700 disabled:cursor-not-allowed active:scale-95 transition-all duration-300 w-12 h-12 group"
+          className="absolute right-1.5 sm:right-2 p-0 flex items-center justify-center rounded-full bg-orange-500 hover:bg-orange-600 disabled:bg-gray-300 dark:disabled:bg-gray-700 disabled:cursor-not-allowed active:scale-95 transition-all duration-300 w-11 h-11 sm:w-12 sm:h-12 group"
         >
           {isLoading ? (
             <Loading text="" />
