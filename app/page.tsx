@@ -258,9 +258,9 @@ export default function FireplexityPage() {
             <Image 
               src="/firecrawl-wordmark.svg" 
               alt="Firecrawl Logo" 
-              width={90} 
-              height={24}
-              className="h-6 w-auto"
+              width={120}
+              height={32}
+              className="h-8 w-auto"
             />
           </Link>
         </div>

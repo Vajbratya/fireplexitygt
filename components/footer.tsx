@@ -18,6 +18,12 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex items-center space-x-6">
+            <Link href="/mission" className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+              Mission
+            </Link>
+            <Link href="/about" className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+              About Us
+            </Link>
             <Link href="https://github.com/mendableai/fireplexity" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
               GitHub
             </Link>
@@ -29,8 +35,9 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="mt-8 text-center text-xs text-gray-400 dark:text-gray-500">
-          &copy; {new Date().getFullYear()} Firecrawl, Inc. All rights reserved.
+        <div className="mt-8 text-center text-xs text-gray-400 dark:text-gray-500 space-y-1">
+          <p>All is free and offered by <a href="https://laudos.ai" target="_blank" rel="noopener noreferrer" className="font-semibold text-orange-500 hover:text-orange-600">laudos.ai</a>.</p>
+          <p>&copy; {new Date().getFullYear()} Firecrawl, Inc. All rights reserved.</p>
         </div>
       </div>
     </footer>
